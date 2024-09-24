@@ -1,0 +1,208 @@
+/* General container styling */
+.container {
+  display: flex;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+/* Left section for the cart items */
+.left {
+  flex: 2;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Cart table styling */
+.table {
+  text-align: center;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.trTitle {
+  background-color: #f5f5f5;
+}
+
+.tr {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.th{
+  text-align: center;
+  padding: 12px;
+  font-size: 16px;
+}
+
+.name{
+  text-align: center;
+}
+  
+
+.td {
+  text-align: center;
+  align-items: center;
+  padding: 12px;
+  font-size: 16px;
+}
+
+/* Image container */
+.imgContainer {
+  width: 100px;
+  height: 100px;
+  position: relative;
+}
+
+/* Product name and extras */
+.name, .extras {
+  font-weight: 500;
+}
+
+/* Price and quantity */
+.price, .quantity, .total {
+  font-weight: 600;
+  color: #333;
+}
+
+/* Right section for the total and checkout */
+.right {
+  flex: 1;
+  padding: 20px;
+  background-color: #f9f9f9;
+  display: flex;
+  border-radius: 10px;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.wrapper {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.totalText {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.totalTextTitle {
+  font-weight: 700;
+}
+
+/* Checkout button */
+.button {
+  width: 50%;
+  padding: 10px;
+  background-color: rgb(244, 99, 123);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: rgb(252, 115, 138);
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .imgContainer {
+    width: 80px;
+    height: 80px;
+  }
+
+  .th{
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .td {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .totalText {
+    font-size: 16px;
+  }
+
+  .button {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .paymentMethods {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .payButton {
+    padding: 10px 5px;
+    cursor: pointer;
+    margin-bottom: 5px;
+    background-color: white;
+    color: teal;
+    font-weight: bold;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 10px;
+    align-items: center;
+  }
+
+  .imgContainer {
+    width: 60px;
+    height: 60px;
+  }
+
+  .th{
+    font-size: 12px;
+  }
+
+  .td {
+    font-size: 12px;
+  }
+
+  .right{
+    width: 50%;
+  }
+
+  .totalText {
+    font-size: 14px;
+  }
+
+  .button {
+    font-size: 12px;
+    padding: 6px;
+  }
+
+  .paymentMethods {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .payButton {
+    padding: 10px 5px;
+    cursor: pointer;
+    margin-bottom: 5px;
+    background-color: white;
+    color: teal;
+    font-weight: bold;
+  }
+}

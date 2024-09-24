@@ -1,0 +1,231 @@
+/* Container for the overall product page */
+.container {
+  display: flex;
+  padding: 50px;
+  gap: 50px;
+}
+
+/* Image Container for the left section */
+.left {
+  flex: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imgContainer {
+  width: 60%;
+  height: 300px;
+  position: relative;
+}
+
+.right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.title {
+  font-size: 25px;
+  font-weight: bold;
+  color: #333;
+}
+
+.price {
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(244, 99, 123);
+}
+
+.desc {
+  font-size: 18px;
+  line-height: 1.5;
+  margin: 20px 0;
+}
+
+.choose {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.sizes {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.size {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  transition: border-color 0.3s ease;
+}
+
+.size:hover {
+  border-color: rgb(244, 99, 123);
+}
+
+.number {
+  position: absolute;
+  font-size: 20px;
+  font-weight: bold;
+  /* color: rgb(244, 99, 123); */
+}
+
+.number:hover {
+  transform: scale(1.5); /* Increase the size by 20% */
+  transition: transform 0.3s ease-in-out; /* Smooth transition */
+}
+
+
+.ingredients {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+}
+
+.checkbox {
+  margin-right: 10px;
+}
+
+/* Add to cart section */
+.add {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.quantity {
+  width: 60px;
+  height: 40px;
+  text-align: center;
+  border: 1px solid rgb(244, 99, 123);
+  border-radius: 5px;
+}
+
+.button {
+  padding: 10px 20px;
+  background-color: rgb(244, 99, 123);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: rgb(252, 115, 138);
+}
+
+/* Media Queries for responsiveness */
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .imgContainer {
+    width: 100%;
+    height: 350px;
+  }
+
+  .title {
+    font-size: 36px;
+  }
+
+  .price {
+    font-size: 28px;
+  }
+
+  .desc {
+    font-size: 16px;
+  }
+
+  .sizes {
+    justify-content: space-around;
+  }
+
+  .size {
+    width: 60px;
+    height: 60px;
+  }
+
+  .number {
+    font-size: 14px;
+  }
+
+  .choose {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 10px;
+    align-items: center;
+  }
+
+  .imgContainer {
+    height: 200px;
+    width: 200px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+
+  .right{
+    margin-top: 0;
+    padding-top: 0;
+    align-items: center;
+  }
+
+  .title {
+    margin-top: 0;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .price {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .desc {
+    font-size: 14px;
+  }
+
+  .size {
+    width: 50px;
+    height: 50px;
+  }
+
+  .number {
+    font-size: 12px;
+  }
+
+  .choose {
+    font-size: 18px;
+  }
+
+  .ingredients{
+    align-items: center;
+  }
+}

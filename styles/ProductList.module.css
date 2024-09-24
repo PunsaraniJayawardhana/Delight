@@ -1,0 +1,22 @@
+.container {
+  padding: 50px;
+  text-align: center;
+}
+
+.heading {
+  font-size: 36px;
+  margin-bottom: 30px;
+  color: #525252;
+}
+
+.grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.desc{
+  font-size: 15px;
+  color: #626262;
+}
