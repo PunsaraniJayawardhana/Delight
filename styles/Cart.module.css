@@ -27,16 +27,15 @@
   border-bottom: 1px solid #e5e5e5;
 }
 
-.th{
+.th {
   text-align: center;
   padding: 12px;
   font-size: 16px;
 }
 
-.name{
+.name {
   text-align: center;
 }
-  
 
 .td {
   text-align: center;
@@ -53,12 +52,15 @@
 }
 
 /* Product name and extras */
-.name, .extras {
+.name,
+.extras {
   font-weight: 500;
 }
 
 /* Price and quantity */
-.price, .quantity, .total {
+.price,
+.quantity,
+.total {
   font-weight: 600;
   color: #333;
 }
@@ -113,6 +115,16 @@
   background-color: rgb(252, 115, 138);
 }
 
+/* Pay Button styling for all screen sizes */
+.payButton {
+  padding: 10px 5px;
+  cursor: pointer;
+  margin-bottom: 5px;
+  background-color: white;
+  color: teal;
+  font-weight: bold;
+}
+
 /* Responsive styles */
 @media screen and (max-width: 768px) {
   .container {
@@ -124,7 +136,7 @@
     height: 80px;
   }
 
-  .th{
+  .th {
     font-size: 14px;
     padding: 8px;
   }
@@ -148,18 +160,9 @@
     display: flex;
     flex-direction: column;
   }
-  
-  .payButton {
-    padding: 10px 5px;
-    cursor: pointer;
-    margin-bottom: 5px;
-    background-color: white;
-    color: teal;
-    font-weight: bold;
-  }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 50px) {
   .container {
     padding: 10px;
     align-items: center;
@@ -170,7 +173,7 @@
     height: 60px;
   }
 
-  .th{
+  .th {
     font-size: 12px;
   }
 
@@ -178,7 +181,7 @@
     font-size: 12px;
   }
 
-  .right{
+  .right {
     width: 50%;
   }
 
@@ -195,14 +198,5 @@
     margin-top: 10px;
     display: flex;
     flex-direction: column;
-  }
-  
-  .payButton {
-    padding: 10px 5px;
-    cursor: pointer;
-    margin-bottom: 5px;
-    background-color: white;
-    color: teal;
-    font-weight: bold;
   }
 }

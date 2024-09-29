@@ -11,14 +11,22 @@ const cartSlice = createSlice({
     addProduct: (state, action) => {
       const product = action.payload;
       
-      // Push the product to the products array
-      state.products.push(product);
+      // Check if the product already exists in the cart
+      const existingProduct = state.products.find((item) => item._id === product._id);
       
-      // Increase the cart quantity by the product quantity
+      if (existingProduct) {
+        // If the product exists, increase the quantity and update the total
+        existingProduct.quantity += product.quantity;
+      } else {
+        // If the product doesn't exist, push it as a new item
+        state.products.push(product);
+      }
+      
+      // Increase the total quantity of items in the cart
       state.quantity += product.quantity;
       
-      // Add the price to the total, taking into account the quantity
-      state.total += action.payload.price * action.payload.quantity;
+      // Update the cart's total price
+      state.total += product.price * product.quantity;
       console.log("Total after adding product:", state.total);
     },
     reset: (state) => {

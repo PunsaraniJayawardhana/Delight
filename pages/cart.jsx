@@ -34,6 +34,7 @@ const Cart = () => {
       console.log(err);
     }
   };
+  
 
   const closeOrderPopup = () => {
     setCash(false); // Set the state to false to hide the popup
@@ -89,6 +90,7 @@ const Cart = () => {
                 total: cart.total,
                 method: 1,
               });
+              console.log(details);
             });
           }}
         />
@@ -141,7 +143,7 @@ const Cart = () => {
                 </td>
                 <td>
                   <span className={styles.total}>
-                    $ {product.price * product.quantity}
+                  $ {(product.price * product.quantity).toFixed(2)}
                   </span>
                 </td>
               </tr>
@@ -153,13 +155,13 @@ const Cart = () => {
         <div className={styles.wrapper}>
           <h2 className={styles.title}>CART TOTAL</h2>
           <div className={styles.totalText}>
-            <b className={styles.totalTextTitle}>Subtotal:</b>$ {amount}
+            <b className={styles.totalTextTitle}>Subtotal:</b>$ {amount.toFixed(2)}
           </div>
           <div className={styles.totalText}>
             <b className={styles.totalTextTitle}>Discount:</b>$ 0.00
           </div>
           <div className={styles.totalText}>
-            <b className={styles.totalTextTitle}>Total:</b>$ {amount}
+            <b className={styles.totalTextTitle}>Total:</b>$ {amount.toFixed(2)}
           </div>
           {open ? (
             <div className={styles.paymentMethods}>
@@ -171,7 +173,7 @@ const Cart = () => {
               </button>
               <PayPalScriptProvider
                 options={{
-                  "client-id":"test",
+                  "client-id":"AbOzug6Kh2RJQak9ebLrxDs47bVAIaakHnDXrRwhIqxpl8C2VeN8CsfOFZaC40xWI4mn8Qer-oSdw82p",
                   components: "buttons",
                   currency: "USD",
                   "disable-funding": "credit,card,p24",
