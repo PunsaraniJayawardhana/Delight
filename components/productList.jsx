@@ -3,6 +3,8 @@ import styles from "../styles/ProductList.module.css";
 
 const ProductList = ({productList}) => {
 
+  console.log(productList);
+
   return (
     <div className={styles.container}>
       <h1 className={styles.heading}>THE BEST CAKE IN TOWN</h1>
@@ -13,13 +15,9 @@ const ProductList = ({productList}) => {
       our cakes are crafted to perfection. 
       Enjoy the finest ingredients and delightful designs that will make your celebrations unforgettable.</p>
       <div className={styles.grid}>
-        {productList.length > 0 ? (
-          productList.map((product) => (
+        { productList.map((product) => (
             <ProductCard key={product._id} product={product} />
-          ))
-        ) : (
-          <p>No products available</p>
-        )}
+          ))}
       </div>
     </div>
   );

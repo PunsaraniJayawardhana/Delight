@@ -2,6 +2,7 @@ import styles from "../styles/Featured.module.css";
 import Image from "next/image";
 import { useState } from "react";
 
+
 const Featured = () => {
   const [index, setIndex] = useState(0);
   const images = [

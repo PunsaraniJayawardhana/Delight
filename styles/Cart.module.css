@@ -49,6 +49,7 @@
   width: 100px;
   height: 100px;
   position: relative;
+  align-items: center;
 }
 
 /* Product name and extras */

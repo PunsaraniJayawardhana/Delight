@@ -1,30 +1,142 @@
 .container {
-    padding: 50px;
-    display: flex;
+  display: flex;            /* Use Flexbox for centering */
+  flex-direction: column;   /* Stack children vertically (one below one) */
+  justify-content: center;  /* Center vertically */
+  align-items: center;      /* Center horizontally *//* Take the full viewport height */
+  text-align: center;  
   }
   
-  .item {
-    flex: 1;
+  .title{
+    color: rgb(244, 99, 123);
+    font-size: 30px;
+    font-weight: bold;
   }
   
   .table {
-    width: 100%;
+    /* width: 100%; */
     border-spacing: 20px;
-    text-align: left;
+    text-align: center;
+  }
+
+  .th{
+    color: rgb(133, 130, 130);
+  }
+
+  .tr{
+    background-color: pink;
   }
   
   .button {
     border: none;
     color: white;
+    background-color: rgb(133, 130, 130);
+    border-radius: 5px;
     padding: 5px;
     cursor: pointer;
   }
+
+  .button:hover{
+    background-color: #444;
+  }
   
   .button:first-child {
-    background-color: teal;
     margin-right: 10px;
   }
+
+  /* Button styles */
+.stageButton {
+  border: none;
+  color: white;
+  background-color: rgb(133, 130, 130);
+  border-radius: 5px;
+  padding: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.stageButton:hover{
+  background-color: #444;
+}
+
+/* Button when disabled */
+.button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  opacity: 0.6;
+  pointer-events: none; /* Ensures button cannot be clicked */
+}
+
+/* Example for a disabled class */
+.disabledButton {
+  background-color: #ddd; /* Gray out the button */
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
   
-  .button:last-child {
-    background-color: crimson;
-  }
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 400px;
+  text-align: center;
+}
+
+/* Modal header */
+.modalContent h3 {
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+/* Input fields for editing the product */
+.modalContent label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #444;
+}
+
+.modalContent input {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.modalActions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.confirmButton, .cancelButton {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.confirmButton {
+  background-color: red;
+  color: white;
+}
+
+.cancelButton {
+  background-color: gray;
+  color: white;
+}

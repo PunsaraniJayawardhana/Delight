@@ -131,7 +131,7 @@ const Cart = () => {
                 <td>
                   <span className={styles.extras}>
                     {product.extras.map((extra) => (
-                      <span key={extra._id}>{extra.text}, </span>
+                      <span key={extra._id}>{extra.text}<br/> </span>
                     ))}
                   </span>
                 </td>

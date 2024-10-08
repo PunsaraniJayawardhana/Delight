@@ -1,0 +1,51 @@
+.container {
+  height: calc(100vh - 100px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  max-width: 100%;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: rgb(252, 245, 246);
+  border-radius: 8px;
+}
+
+.title{
+  color: rgb(244, 99, 123);
+  text-align: center;
+  font-size: 35px;
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.input {
+  height: 40px;
+  margin-bottom: 20px;
+  padding: 0px 10px;
+}
+
+.button {
+  height: 40px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(244, 99, 123);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  width: 200px; /* Adjust the width as needed */
+  align-self: center; /* Center the button within the wrapper */
+}
+
+
+.error {
+  font-size: 13px;
+  color: red;
+}
